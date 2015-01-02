@@ -14,6 +14,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'slim-rails'
 
+# Controller
+gem 'devise'
+
 group :doc do
   gem 'sdoc', '~> 0.4.0'
 end
@@ -34,6 +37,6 @@ group :development, :test do
 end
 
 group :test do
-  gem 'plymouth'
+  gem 'faker'
   gem 'fabrication'
 end
