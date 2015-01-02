@@ -40,4 +40,5 @@ group :test do
   gem 'rake'
   gem 'faker'
   gem 'fabrication'
+  gem 'simplecov', :require => false
 end
