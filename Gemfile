@@ -35,4 +35,5 @@ end
 
 group :test do
   gem 'plymouth'
+  gem 'fabrication'
 end
