@@ -2,4 +2,3 @@ language: ruby
 rvm:
   - 2.2.0
 bundler_args: --binstubs --without 'doc production' --retry=3 --jobs=3
-script: bundle exec rspec spec
