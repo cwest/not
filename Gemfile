@@ -37,6 +37,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'rake'
   gem 'faker'
   gem 'fabrication'
 end
