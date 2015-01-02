@@ -19,5 +19,10 @@ group :development, :test do
   gem 'web-console', '~> 2.0'
   gem 'spring'
   gem 'rspec-rails', '~> 3.0'
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
 end
 
+group :test do
+  gem 'plymouth'
+end
