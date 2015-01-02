@@ -1,4 +1,4 @@
-== README
+# Not [![Build Status][travis-badge]][travis-build]
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -26,3 +26,7 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+[travis-badge]: https://travis-ci.org/cwest/not.svg?branch=master
+[travis-build]: https://travis-ci.org/cwest/not
+
