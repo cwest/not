@@ -39,6 +39,7 @@ group :development, :test do
   gem 'rubocop',       require: false
   gem 'rubocop-rspec', require: false
   gem 'brakeman',      require: false
+  gem 'bundler-audit', require: false
 end
 
 group :test do
