@@ -8,6 +8,7 @@ namespace :test do
 
   desc 'Run all tests'
   task all: :environment do
+    Rake::Task['brakeman:run'].invoke
     Rake::Task['rubocop'].invoke
     Rake::Task['spec'].invoke
   end

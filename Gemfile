@@ -36,8 +36,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 
   # Safety
-  gem 'rubocop', require: false
+  gem 'rubocop',       require: false
   gem 'rubocop-rspec', require: false
+  gem 'brakeman',      require: false
 end
 
 group :test do
