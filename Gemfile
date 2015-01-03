@@ -16,6 +16,7 @@ gem 'slim-rails'
 
 # Controller
 gem 'devise'
+gem 'secure_headers'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
