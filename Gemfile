@@ -13,6 +13,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'slim-rails'
+gem 'simple_form'
+gem 'country_select'
 
 # Controller
 gem 'devise'
