@@ -1,0 +1,18 @@
+require: rubocop-rspec
+inherit_from: .rubocop_todo.yml
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/**/*'
+    - 'config/initializers/devise.rb'
+    - 'db/migrate/*'
+  RunRailsCops: true
+Metrics/LineLength:
+  Max: 120
+Metrics/MethodLength:
+  Max: 15
+Style/SingleSpaceBeforeFirstArg:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+
