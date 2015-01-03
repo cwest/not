@@ -16,6 +16,7 @@ gem 'slim-rails'
 
 # Controller
 gem 'devise'
+gem 'secure_headers'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
@@ -36,8 +37,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 
   # Safety
-  gem 'rubocop', require: false
+  gem 'rubocop',       require: false
   gem 'rubocop-rspec', require: false
+  gem 'brakeman',      require: false
+  gem 'bundler-audit', require: false
 end
 
 group :test do
