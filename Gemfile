@@ -34,11 +34,15 @@ group :development, :test do
 
   # Test
   gem 'rspec-rails', '~> 3.0'
+
+  # Safety
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
 end
 
 group :test do
   gem 'rake'
   gem 'faker'
   gem 'fabrication'
-  gem 'simplecov', :require => false
+  gem 'simplecov', require: false
 end
