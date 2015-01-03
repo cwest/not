@@ -5,6 +5,7 @@ gem 'rails', '4.2.0'
 
 # Model
 gem 'pg'
+gem 'paper_trail'
 
 # View
 gem 'sass-rails', '~> 5.0'
