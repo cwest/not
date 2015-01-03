@@ -1,4 +1,9 @@
-# Not [![Build Status][travis-badge]][travis-build]
+# Not
+
+|  Service  |                          Status                         |
+|-----------|---------------------------------------------------------|
+| Travis    | [![Build Status][travis-badge]][travis-page]            |
+| Gemnasium | [![Dependency Status][gemnasium-badge]][gemnasium-page] |
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -28,5 +33,8 @@ Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
 
 [travis-badge]: https://travis-ci.org/cwest/not.svg?branch=master
-[travis-build]: https://travis-ci.org/cwest/not
+[travis-page]: https://travis-ci.org/cwest/not
+
+[gemnasium-badge]: https://gemnasium.com/cwest/not.svg
+[gemnasium-page]: https://gemnasium.com/cwest/not
 
