@@ -16,6 +16,9 @@
 !/log/.keep
 /tmp
 
+# Ignore generated reports.
 /reports
+/doc
 
+# Ignore local .env files.
 .env.*
