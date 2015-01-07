@@ -33,6 +33,9 @@ module Not
       g.view_specs = false
     end
 
-    config.autoload_paths += %W(#{config.root}/app/extensions)
+    config.autoload_paths += %W(
+      #{config.root}/app/extensions
+      #{config.root}/lib
+    )
   end
 end
