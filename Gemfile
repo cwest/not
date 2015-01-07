@@ -47,6 +47,15 @@ group :development, :test do
   gem 'bullet'
 end
 
+group :development do
+  # Peek Bar
+  gem 'peek'
+  gem 'peek-git'
+  gem 'peek-gc'
+  gem 'peek-performance_bar'
+  gem 'peek-pg'
+end
+
 group :test do
   gem 'rake'
   gem 'faker'
