@@ -19,4 +19,16 @@ RSpec.describe User, type: :model do
       subject.send_devise_notification(anything)
     end
   end
+
+  context 'Organizations' do
+    context 'With Role' do
+      let(:organization_user) { Fabricate(:organization_user, user: subject) }
+
+      it 'finds an organization given a valid role' do
+        role         = organization_user.organization_role
+        organization = organization_user.organization
+        expect(subject.organizations.send(role.name)).to contain_exactly(organization)
+      end
+    end
+  end
 end
