@@ -7,3 +7,7 @@ addons:
 before_script:
   - psql -c 'create database not_ci;' -U postgres
 env: CI=true
+
+# Docker Infrastructure
+sudo: false
+cache: bundler
