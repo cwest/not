@@ -7,6 +7,7 @@ AllCops:
     - 'config/initializers/devise.rb'
     - 'config/initializers/simple_form*'
     - 'db/migrate/*'
+    - 'vendor/**/*'
   RunRailsCops: true
 Metrics/LineLength:
   Max: 120
