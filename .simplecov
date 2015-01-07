@@ -1,4 +1,5 @@
 SimpleCov.start 'rails' do
-  SimpleCov.minimum_coverage 90
-  SimpleCov.coverage_dir('reports/coverage')
+  minimum_coverage 90
+  coverage_dir('reports/coverage')
+  add_group "Extensions", "app/extensions"
 end
