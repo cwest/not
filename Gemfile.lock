@@ -54,6 +54,9 @@ GEM
       sass (~> 3.0)
       terminal-table (~> 1.4)
     builder (3.2.2)
+    bullet (4.14.0)
+      activesupport (>= 3.0.0)
+      uniform_notifier (>= 1.6.0)
     bundler-audit (0.3.1)
       bundler (~> 1.2)
       thor (~> 0.18)
@@ -249,6 +252,7 @@ GEM
     uglifier (2.6.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uniform_notifier (1.6.2)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.0.0)
@@ -262,6 +266,7 @@ PLATFORMS
 
 DEPENDENCIES
   brakeman
+  bullet
   bundler-audit
   byebug
   coffee-rails (~> 4.1.0)
