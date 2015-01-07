@@ -42,4 +42,12 @@ Rails.application.configure do
   config.action_mailer.default_url_options = {
     host: 'not.dev'
   }
+
+  config.after_initialize do
+    Bullet.enable       = true
+    Bullet.alert        = true
+    Bullet.add_footer   = true
+    Bullet.console      = true
+    Bullet.rails_logger = true
+  end
 end
