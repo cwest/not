@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Not</title>
-  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+doctype html
+html
+  head
+    title Not
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    - if peek_enabled?
+      = stylesheet_link_tag 'peek_bar', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+body
+  = render 'peek/bar' if peek_enabled?
+  = yield
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
-  = csrf_meta_tags
-</head>
-<body>
-
-= yield
-
-</body>
-</html>
+  - if peek_enabled?
+    = javascript_include_tag 'peek_bar', 'data-turbolinks-track' => true
