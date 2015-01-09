@@ -16,6 +16,7 @@ gem 'turbolinks'
 gem 'slim-rails'
 gem 'simple_form'
 gem 'country_select'
+gem 'reform'
 
 # Controller
 gem 'devise'
