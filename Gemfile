@@ -32,9 +32,13 @@ group :development, :test do
   # Development
   gem 'byebug'
   gem 'web-console', '~> 2.0'
+  gem 'dotenv-rails'
+
+  # Development - Pry
   gem 'pry-rails'
   gem 'pry-stack_explorer'
-  gem 'dotenv-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 
   # Test
   gem 'rspec-rails', '~> 3.0'
