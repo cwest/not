@@ -1,0 +1,9 @@
+h1 Name
+
+= @organization.name
+
+h1 Users
+
+ul
+  - @organization.organization_users.each do |org_user|
+    li= "#{org_user.user.email} (#{org_user.organization_role.name})"
