@@ -35,6 +35,8 @@ module Not
 
     config.autoload_paths += %W(
       #{config.root}/app/extensions
+      #{config.root}/app/forms
+      #{config.root}/app/services
       #{config.root}/lib
     )
   end

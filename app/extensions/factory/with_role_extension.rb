@@ -82,6 +82,7 @@ module Factory
         proxy_association.association_scope
           .joins(builder.mapping_association => builder.role_association)
           .merge(builder.role_class.where(builder.role_column => role_name))
+          .distinct
       end
     end
 
