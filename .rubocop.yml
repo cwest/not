@@ -11,8 +11,6 @@ AllCops:
   RunRailsCops: true
 Metrics/LineLength:
   Max: 120
-Metrics/MethodLength:
-  Max: 15
 Style/SingleSpaceBeforeFirstArg:
   Enabled: false
 Style/Documentation:
