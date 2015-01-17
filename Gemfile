@@ -7,6 +7,9 @@ gem 'rails', '4.2.0'
 gem 'pg'
 gem 'paper_trail'
 
+# Access Policy
+gem 'pundit'
+
 # View
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -66,4 +69,5 @@ group :test do
   gem 'faker'
   gem 'fabrication'
   gem 'simplecov', require: false
+  gem 'database_cleaner'
 end
