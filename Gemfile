@@ -11,15 +11,19 @@ gem 'paper_trail'
 gem 'pundit'
 
 # View
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
-gem 'jquery-rails'
-gem 'turbolinks'
 gem 'slim-rails'
 gem 'simple_form'
 gem 'country_select'
 gem 'reform'
+
+# Assets
+gem 'sass-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.1.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'bootstrap-sass'
+# XXX gem 'autoprefixer-rails'
 
 # Controller
 gem 'devise'
