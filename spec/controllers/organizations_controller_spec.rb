@@ -9,6 +9,13 @@ RSpec.describe OrganizationsController, type: :controller do
     sign_in current_user
   end
 
+  describe 'GET index' do
+    it 'lists my organizations' do
+      get :index
+      expect(response).to have_http_status(:success)
+    end
+  end
+
   describe 'GET new' do
     it 'returns http success' do
       get :new
@@ -41,10 +48,11 @@ RSpec.describe OrganizationsController, type: :controller do
   end
 
   describe 'GET show' do
-    let(:organization) { Fabricate(:organization) }
+    let(:organization_user) { Fabricate(:organization_user, user: current_user) }
+    subject { organization_user.organization }
 
     it 'returns http success' do
-      get :show, id: organization.id
+      get :show, id: subject.id
       expect(response).to have_http_status(:success)
     end
   end
