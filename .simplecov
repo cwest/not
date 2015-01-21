@@ -3,5 +3,6 @@ SimpleCov.start 'rails' do
   coverage_dir('reports/coverage')
   add_group 'Extensions', 'app/extensions'
   add_group 'Forms',      'app/forms'
+  add_group 'Policies',   'app/policies'
   add_group 'Services',   'app/services'
 end
