@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  mount Peek::Railtie => '/peek' if PeekBar.available?
+  mount Peek::Railtie           => '/peek' if PeekBar.available?
+  mount LetterOpenerWeb::Engine => '/mail' if Rails.env.development?
 
   devise_for :user, skip: [:sessions, :passwords, :registrations, :unlocks]
 
@@ -15,11 +16,12 @@ Rails.application.routes.draw do
       end
     end
 
-    resource :register, controller: 'devise/registrations', except: :show do
+    resource :join, controller: 'user_registrations', except: [:show, :new] do
       member do
         get 'cancel'
       end
     end
+    get '/join', to: 'user_registrations#new', as: 'new_join'
 
     resources :organizations
 

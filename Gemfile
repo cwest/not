@@ -16,6 +16,9 @@ gem 'simple_form'
 gem 'country_select'
 gem 'reform'
 
+# View Controller
+gem 'cells'
+
 # Assets
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
@@ -57,6 +60,10 @@ group :development, :test do
   gem 'brakeman',      require: false
   gem 'bundler-audit', require: false
   gem 'bullet'
+
+  # Mailer
+  gem 'letter_opener'
+  gem 'letter_opener_web'
 end
 
 group :development do
@@ -74,4 +81,9 @@ group :test do
   gem 'fabrication'
   gem 'simplecov', require: false
   gem 'database_cleaner'
+  gem 'cucumber-rails', require: false
+  gem 'capybara-screenshot'
+  gem 'poltergeist'
+  gem 'rspec-cells'
+  gem 'email_spec'
 end

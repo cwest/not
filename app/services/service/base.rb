@@ -20,7 +20,7 @@ module Service
 
     def result_for(callback)
       result = yield
-      callback.call(result ? success : error)
+      callback.call(result ? success : error) if callback
       result
     end
 
