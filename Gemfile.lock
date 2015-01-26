@@ -147,6 +147,7 @@ GEM
       activesupport (>= 4.1.0)
     haml (4.0.6)
       tilt
+    high_voltage (2.2.1)
     highline (1.6.21)
     hike (1.2.3)
     i18n (0.7.0)
@@ -381,6 +382,7 @@ DEPENDENCIES
   email_spec
   fabrication
   faker
+  high_voltage
   jquery-rails
   letter_opener
   letter_opener_web
