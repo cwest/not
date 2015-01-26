@@ -26,7 +26,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass'
-# XXX gem 'autoprefixer-rails'
+gem 'autoprefixer-rails'
 
 # Controller
 gem 'devise'
