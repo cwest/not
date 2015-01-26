@@ -1,19 +1,18 @@
 doctype html
 html
   head
-    title Not
+    title= t('app.name')
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     - if peek_enabled?
       = stylesheet_link_tag 'peek_bar', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
-body
-  = render 'peek/bar' if peek_enabled?
+  body
+    = render 'peek/bar' if peek_enabled?
 
-  .container
-    .row
-      .col-md-12
-        = yield
+    .container
+      .row: .col-md-12= cell(:flash, flash).call(:list)
+      .row: .col-md-12= yield
 
-  = javascript_include_tag 'application', 'data-turbolinks-track' => true
-  - if peek_enabled?
-    = javascript_include_tag 'peek_bar', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    - if peek_enabled?
+      = javascript_include_tag 'peek_bar', 'data-turbolinks-track' => true

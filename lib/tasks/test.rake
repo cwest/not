@@ -6,12 +6,15 @@ Rake::Task['test'].clear
 namespace :test do
   task default: :all
 
+  task :prepare do
+    ENV['RACK_ENV'] = ENV['RAILS_ENV'] = 'test'
+  end
+
   desc 'Run all tests'
   task all: :environment do
-    Rake::Task['bundle_audit'].invoke
-    Rake::Task['brakeman:run'].invoke
-    Rake::Task['rubocop'].invoke
-    Rake::Task['spec'].invoke
+    %w(bundle_audit brakeman:run rubocop spec cucumber notes).each do |task|
+      Rake::Task[task].invoke
+    end
   end
 end
 
