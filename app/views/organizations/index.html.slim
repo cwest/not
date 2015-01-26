@@ -1,3 +1,8 @@
+h1
+  | Organizations
+  small.pull-right
+    = link_to "New Organization", new_organization_path, class: 'btn btn-info'
+
 ul
   - @organizations.each do |organization|
-    li= organization.name
+    li= link_to organization.name, organization
