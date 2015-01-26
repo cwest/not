@@ -24,7 +24,5 @@ Rails.application.routes.draw do
     get '/join', to: 'user_registrations#new', as: 'new_join'
 
     resources :organizations
-
-    root to: 'static#index'
   end
 end

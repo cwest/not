@@ -15,6 +15,7 @@ gem 'slim-rails'
 gem 'simple_form'
 gem 'country_select'
 gem 'reform'
+gem 'high_voltage'
 
 # View Controller
 gem 'cells'
