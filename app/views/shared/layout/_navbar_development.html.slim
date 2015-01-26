@@ -1,0 +1,12 @@
+li.dropdown
+  a.dropdown-toggle aria-expanded="false" data-toggle="dropdown" href="#" role="button"
+    | Development
+    span.caret
+  ul.dropdown-menu role="menu"
+    li= link_to "Mail", letter_opener_web_path, target: '_mail'
+    li= link_to "Coverage", 'file://' + File.join(Rails.root, 'reports/coverage/index.html'), target: '_coverage'
+    li.divider
+    li= link_to "GitHub", "https://github.com/cwest/not", target: "_github"
+    li= link_to "Pull Requests", "https://github.com/cwest/not/pulls", target: "_pulls"
+    li= link_to "Travis CI", "https://travis-ci.org/cwest/not", target: "_travis"
+    li= link_to "Gemnasium", "https://gemnasium.com/cwest/not", target: "_gemnasium"

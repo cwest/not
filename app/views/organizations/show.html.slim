@@ -1,9 +1,11 @@
-h1 Name
+h1
+  = @organization.name
+  small< Organization
 
-= @organization.name
-
-h1 Users
-
-ul
-  - @organization.organization_users.each do |org_user|
-    li= "#{org_user.user.email} (#{org_user.organization_role.name})"
+.row
+  .col-md-2
+    strong Users
+  .col-md-10
+    ul.list-unstyled
+      - @organization.organization_users.each do |org_user|
+        li= "#{org_user.user.email} (#{org_user.organization_role.name})"
