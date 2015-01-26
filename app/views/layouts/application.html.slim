@@ -7,7 +7,7 @@ html
       = stylesheet_link_tag 'peek_bar', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    = render 'peek/bar' if peek_enabled?
+    = render 'shared/layout/navbar'
 
     .container
       .row: .col-md-12= cell(:flash, flash).call(:list)
@@ -16,3 +16,5 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     - if peek_enabled?
       = javascript_include_tag 'peek_bar', 'data-turbolinks-track' => true
+
+    = render 'peek/bar' if peek_enabled?
