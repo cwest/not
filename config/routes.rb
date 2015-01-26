@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  mount Peek::Railtie           => '/peek' if PeekBar.available?
-  mount LetterOpenerWeb::Engine => '/mail' if Rails.env.development?
+  mount Peek::Railtie           => 'peek' if PeekBar.available?
+  mount LetterOpenerWeb::Engine => 'mail' if Rails.env.development?
 
   devise_for :user, skip: [:sessions, :passwords, :registrations, :unlocks]
 

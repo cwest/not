@@ -1,0 +1,15 @@
+nav.navbar.navbar-default.navbar-static-top
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed data-target="#main-navbar-collapse" data-toggle="collapse" type="button"
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      = link_to t('app.name'), root_path, class: 'navbar-brand'
+    #main-navbar-collapse.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li= link_to "Organizations", organizations_path
+      ul.nav.navbar-nav.navbar-right
+        = render 'shared/layout/navbar_account'
+        = render 'shared/layout/navbar_development' if Rails.env.development?
