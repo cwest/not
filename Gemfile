@@ -9,6 +9,7 @@ gem 'paper_trail'
 
 # Access Policy
 gem 'pundit'
+gem 'switch_user'
 
 # View
 gem 'slim-rails'
@@ -28,6 +29,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'bourbon'
 
 # Controller
 gem 'devise'
