@@ -1,10 +1,11 @@
 //= require peek
 //= require peek/views/performance_bar
 
+// scss-lint:disable IdSelector
 #peek {
+  bottom: 0;
+  left: 0;
   position: fixed;
-  bottom:   0;
-  left:     0;
-  right:    0;
-  z-index:  999;
+  right: 0;
+  z-index: 999;
 }

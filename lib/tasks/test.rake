@@ -2,6 +2,17 @@ Rake::Task['test:all'].clear
 Rake::Task['test:all:db'].clear
 Rake::Task['test:db'].clear
 Rake::Task['test'].clear
+Rake::Task['default'].clear
+
+ALL_EXPECTATIONS = %w(
+  bundle_audit
+  brakeman:run
+  rubocop
+  scss_lint
+  spec
+  cucumber
+  notes
+)
 
 namespace :test do
   task default: :all
@@ -12,7 +23,8 @@ namespace :test do
 
   desc 'Run all tests'
   task all: :environment do
-    %w(bundle_audit brakeman:run rubocop spec cucumber notes).each do |task|
+    ALL_EXPECTATIONS.each do |task|
+      pr "rake #{task}"
       Rake::Task[task].invoke
     end
   end

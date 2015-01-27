@@ -68,6 +68,12 @@ group :development, :test do
   # Mailer
   gem 'letter_opener'
   gem 'letter_opener_web'
+
+  # Linters
+  gem 'scss-lint', require: false
+
+  # Console Output
+  gem 'priscilla'
 end
 
 group :development do
