@@ -1,25 +1,24 @@
 $superuser-bg-color: $navbar-default-bg;
-$superuser-bg-max: 0.75;
-$superuser-bg-min: 0.25;
+$superuser-bg-max: .75;
+$superuser-bg-min: .25;
 $superuser-text-color: $text-color;
 
 .superuser-tools {
-  position: relative;
-
-  background: $superuser-bg-color url(superuser/bg.png);
+  background: $superuser-bg-color url('superuser/bg.png');
   color: $superuser-text-color;
   font-weight: bold;
+  position: relative;
 
   &:before {
     @include linear-gradient(
       rgba($superuser-bg-color, $superuser-bg-min),
       rgba($superuser-bg-color, $superuser-bg-max)
     );
+    bottom: 0;
+    content: '';
+    left: 0;
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    content: "";
+    right: 0;
+    top: 0;
   }
 }
