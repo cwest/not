@@ -99,6 +99,7 @@ GEM
       execjs
     coffee-script-source (1.8.0)
     colored (1.2)
+    colorize (0.7.5)
     columnize (0.9.0)
     countries (0.10.0)
       currencies (~> 0.4.2)
@@ -204,6 +205,9 @@ GEM
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
     powerpack (0.0.9)
+    priscilla (1.0.3)
+      colorize (~> 0.7)
+      rumoji (~> 0.3)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -296,6 +300,7 @@ GEM
       sexp_processor (~> 4.0)
     ruby_parser (3.5.0)
       sexp_processor (~> 4.1)
+    rumoji (0.4.0)
     sass (3.4.10)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -303,6 +308,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    scss-lint (0.33.0)
+      rainbow (~> 2.0)
+      sass (~> 3.4.1)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -399,6 +407,7 @@ DEPENDENCIES
   peek-pg
   pg
   poltergeist
+  priscilla
   pry-byebug
   pry-doc
   pry-rails
@@ -413,6 +422,7 @@ DEPENDENCIES
   rubocop
   rubocop-rspec
   sass-rails
+  scss-lint
   sdoc (~> 0.4.0)
   secure_headers
   simple_form
