@@ -3,6 +3,6 @@ h1
   small.pull-right
     = link_to "New Organization", new_organization_path, class: 'btn btn-info'
 
-ul
+ul.organizations
   - @organizations.each do |organization|
-    li= link_to organization.name, organization
+    li.organization= link_to organization.name, organization, class: 'url'

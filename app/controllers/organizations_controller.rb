@@ -16,7 +16,7 @@ class OrganizationsController < ApplicationController
 
     creator.call do |result|
       @form = result.service.form
-      redirect_to @form   if result.success?
+      redirect_to @form, notice: 'Organization created!' if result.success?
       render action: :new if result.error?
     end
   end
