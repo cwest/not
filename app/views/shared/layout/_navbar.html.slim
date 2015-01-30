@@ -6,7 +6,9 @@ nav.navbar.navbar-default.navbar-static-top
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      = link_to t('app.name'), root_path, class: 'navbar-brand'
+      = link_to root_path, class: 'navbar-brand' do
+        = render 'shared/brand'
+        = t('app.name')
     #main-navbar-collapse.collapse.navbar-collapse
       ul.nav.navbar-nav
         li= link_to "Organizations", organizations_path

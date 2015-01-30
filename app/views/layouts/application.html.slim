@@ -6,6 +6,7 @@ html
     - if peek_enabled?
       = stylesheet_link_tag 'peek_bar', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    = render 'shared/head/favicon'
   body
     = render 'shared/layout/superuser'
     = render 'shared/layout/navbar'
