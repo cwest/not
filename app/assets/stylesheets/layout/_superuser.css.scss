@@ -1,24 +1,26 @@
-$superuser-bg-color: $navbar-default-bg;
-$superuser-bg-max: .75;
-$superuser-bg-min: .25;
-$superuser-text-color: $text-color;
+$superuser-text-color: $navbar-default-bg;
+$superuser-bg-alpha: .4;
+$superuser-bg-color: rgba(invert($superuser-text-color), $superuser-bg-alpha);
 
 .superuser-tools {
   background: $superuser-bg-color url('superuser/bg.png');
   color: $superuser-text-color;
-  font-weight: bold;
+  padding-top: $padding-small-vertical;
   position: relative;
+  text-shadow: 0 1px 0 $text-color;
 
   &:before {
-    @include linear-gradient(
-      rgba($superuser-bg-color, $superuser-bg-min),
-      rgba($superuser-bg-color, $superuser-bg-max)
-    );
+    background: $superuser-bg-color;
     bottom: 0;
     content: '';
     left: 0;
     position: absolute;
     right: 0;
     top: 0;
+  }
+
+  select {
+    background-color: $superuser-bg-color;
+    font-weight: normal;
   }
 }
