@@ -23,3 +23,6 @@
 
 # Ignore local .env files.
 .env.*
+
+# Ignore OSX files.
+.DS_Store
