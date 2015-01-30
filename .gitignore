@@ -18,7 +18,8 @@
 
 # Ignore generated reports.
 /reports
-/doc
+/doc/models_*.svg
+/doc/controllers_*.svg
 
 # Ignore local .env files.
 .env.*
