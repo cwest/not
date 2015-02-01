@@ -1,0 +1,12 @@
+$navbar-brand-diameter: $navbar-height - $padding-small-vertical * 2;
+
+.navbar-brand {
+  padding-top: $padding-small-vertical;
+
+  img {
+    display: inline-block;
+    height: $navbar-brand-diameter;
+    margin-right: $padding-small-horizontal;
+    width: $navbar-brand-diameter;
+  }
+}
