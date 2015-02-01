@@ -1,8 +1,10 @@
-.superuser-tools
+#superuser-tools.superuser-tools
   .container
     .row
-      .col-sm-9
-        | Super User Tools
-      .col-sm-3
+      .col-sm-8
+      .col-sm-4
         .pull-right
-          form: label= switch_user_select
+          .tool
+            form: label
+              ' Switch User
+              = switch_user_select
