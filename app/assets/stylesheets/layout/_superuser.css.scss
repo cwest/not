@@ -1,26 +1,22 @@
-$superuser-text-color: $navbar-default-bg;
-$superuser-bg-alpha: .4;
-$superuser-bg-color: rgba(invert($superuser-text-color), $superuser-bg-alpha);
-
 .superuser-tools {
-  background: $superuser-bg-color url('superuser/bg.png');
-  color: $superuser-text-color;
+  background: $dark-gray url('superuser/bg.png');
+  box-shadow: inset 0 -2px 2px rgba($dark-gray, .5);
+  display: none;
   padding-top: $padding-small-vertical;
-  position: relative;
-  text-shadow: 0 1px 0 $text-color;
 
-  &:before {
-    background: $superuser-bg-color;
-    bottom: 0;
-    content: '';
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
+  label {
+    font-weight: inherit;
   }
 
   select {
-    background-color: $superuser-bg-color;
-    font-weight: normal;
+    background-color: transparent;
+  }
+
+  .tool {
+    @include border-top-radius($border-radius-small);
+
+    background: $navbar-default-bg;
+    color: $navbar-default-color;
+    padding: $padding-small-vertical $padding-small-horizontal;
   }
 }
