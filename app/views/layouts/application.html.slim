@@ -7,13 +7,14 @@ html
       = stylesheet_link_tag 'peek_bar', media: 'all', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = render 'shared/head/favicon'
-  body
+  body class=yield(:body_class)
     = render 'shared/layout/superuser'
     = render 'shared/layout/navbar'
 
-    .container
-      .row: .col-md-12= cell(:flash, flash).call(:list)
-      .row: .col-md-12= yield
+    .content
+      .container
+        .row: .col-md-12= cell(:flash, flash).call(:list)
+        .row: .col-md-12= yield
 
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     - if peek_enabled?
