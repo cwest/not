@@ -1,3 +1,15 @@
-h1 Static#index
-- 1000.times do
-  p Find me in app/views/static/index.html.slim
+- content_for :body_class
+  | home page
+
+.row
+  .col-md-6
+    .pitch
+      .page-header
+        h1 Always know what's on tap.
+      ul
+        li Keep your tap list up to date.
+        li Automatically tell people when taps change.
+        li Sit back and enjoy a beer.
+      p: big: strong: em Cheers!
+  .col-md-6
+    p= render 'shared/brand'

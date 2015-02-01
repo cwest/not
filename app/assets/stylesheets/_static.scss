@@ -1,0 +1,11 @@
+.page.home {
+  .content {
+    background: $dark-gray;
+    color: $light-gray;
+
+    .pitch {
+      margin-top: $line-height-computed * 6;
+      padding: $padding-large-vertical $padding-large-horizontal;
+    }
+  }
+}
