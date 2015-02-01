@@ -65,7 +65,7 @@ GEM
       sass (~> 3.0)
       terminal-table (~> 1.4)
     builder (3.2.2)
-    bullet (4.14.2)
+    bullet (4.14.3)
       activesupport (>= 3.0.0)
       uniform_notifier (>= 1.6.0)
     bundler-audit (0.3.1)
