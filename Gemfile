@@ -71,6 +71,7 @@ source 'https://rubygems.org' do
 
     # Linters
     gem 'scss-lint', require: false
+    gem 'coffeelint'
 
     # Console Output
     gem 'priscilla'
