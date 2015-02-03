@@ -57,6 +57,7 @@ group :development, :test do
 
   # Test
   gem 'rspec-rails', '~> 3.0'
+  gem 'jasmine-rails'
 
   # Safety
   gem 'rubocop',       require: false
