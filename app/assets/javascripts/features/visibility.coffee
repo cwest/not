@@ -5,7 +5,7 @@ $ ->
     e.preventDefault()
 
     id = $(e.target).data('visibility')
-    $target = cache.get(id) || cache.set(id, $(id))
+    $target = cache.get(id) or cache.set(id, $(id))
 
     if $target.stop().is(':visible')
       $target.slideUp   'fast', -> $target.trigger 'visibility:hidden'
