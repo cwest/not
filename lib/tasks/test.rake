@@ -9,6 +9,7 @@ ALL_EXPECTATIONS = %w(
   brakeman:run
   rubocop
   scss_lint
+  coffeelint
   spec
   cucumber
   notes
