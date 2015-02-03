@@ -1,12 +1,12 @@
 language: ruby
 rvm:
   - 2.2.0
-bundler_args: --binstubs --without 'doc production' --retry=3 --jobs=3
+bundler_args: --binstubs --without 'production' --retry=3 --jobs=3
 addons:
   postgresql: "9.3"
 before_script:
   - psql -c 'create database not_ci;' -U postgres
-env: CI=true
+script: bundle exec rake test:ci
 
 # Docker Infrastructure
 sudo: false
