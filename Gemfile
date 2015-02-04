@@ -1,103 +1,103 @@
-source 'https://rubygems.org' do
+source 'https://rubygems.org'
+
+# Core
+gem 'rails', '4.2.0'
+
+# Model
+gem 'pg'
+gem 'paper_trail'
+
+# Access Policy
+gem 'pundit'
+gem 'switch_user'
+
+# View
+gem 'slim-rails'
+gem 'simple_form'
+gem 'country_select'
+gem 'reform'
+gem 'high_voltage'
+
+# View Controller
+gem 'cells'
+
+# Assets
+gem 'sass-rails'
+gem 'uglifier', '>= 1.3.0'
+gem 'coffee-rails', '~> 4.1.0'
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'bourbon'
+
+# Controller
+gem 'devise'
+gem 'secure_headers'
+
+group :doc do
+  gem 'sdoc', '~> 0.4.0'
+end
+
+group :development, :test do
   # Core
-  gem 'rails', '4.2.0'
+  gem 'spring'
 
-  # Model
-  gem 'pg'
-  gem 'paper_trail'
+  # Development
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'dotenv-rails'
+  gem 'railroady'
 
-  # Access Policy
-  gem 'pundit'
-  gem 'switch_user'
+  # Development - Pry
+  gem 'pry-rails'
+  gem 'pry-stack_explorer'
+  gem 'pry-byebug'
+  gem 'pry-doc'
 
-  # View
-  gem 'slim-rails'
-  gem 'simple_form'
-  gem 'country_select'
-  gem 'reform'
-  gem 'high_voltage'
+  # Test
+  gem 'rspec-rails', '~> 3.0'
+  gem 'jasmine-rails'
 
-  # View Controller
-  gem 'cells'
+  # Safety
+  gem 'rubocop',       require: false
+  gem 'rubocop-rspec', require: false
+  gem 'brakeman',      require: false
+  gem 'bundler-audit', require: false
+  gem 'bullet'
 
-  # Assets
-  gem 'sass-rails'
-  gem 'uglifier', '>= 1.3.0'
-  gem 'coffee-rails', '~> 4.1.0'
-  gem 'jquery-rails'
-  gem 'turbolinks'
-  gem 'bootstrap-sass'
-  gem 'autoprefixer-rails'
-  gem 'bourbon'
+  # Mailer
+  gem 'letter_opener'
+  gem 'letter_opener_web'
 
-  # Controller
-  gem 'devise'
-  gem 'secure_headers'
+  # Linters
+  gem 'scss-lint', require: false
+  gem 'coffeelint'
 
-  group :doc do
-    gem 'sdoc', '~> 0.4.0'
-  end
+  # Console Output
+  gem 'priscilla'
+end
 
-  group :development, :test do
-    # Core
-    gem 'spring'
+group :development do
+  # Peek Bar
+  gem 'peek'
+  gem 'peek-git'
+  gem 'peek-gc'
+  gem 'peek-performance_bar'
+  gem 'peek-pg'
+end
 
-    # Development
-    gem 'byebug'
-    gem 'web-console', '~> 2.0'
-    gem 'dotenv-rails'
-    gem 'railroady'
-
-    # Development - Pry
-    gem 'pry-rails'
-    gem 'pry-stack_explorer'
-    gem 'pry-byebug'
-    gem 'pry-doc'
-
-    # Test
-    gem 'rspec-rails', '~> 3.0'
-    gem 'jasmine-rails'
-
-    # Safety
-    gem 'rubocop',       require: false
-    gem 'rubocop-rspec', require: false
-    gem 'brakeman',      require: false
-    gem 'bundler-audit', require: false
-    gem 'bullet'
-
-    # Mailer
-    gem 'letter_opener'
-    gem 'letter_opener_web'
-
-    # Linters
-    gem 'scss-lint', require: false
-    gem 'coffeelint'
-
-    # Console Output
-    gem 'priscilla'
-  end
-
-  group :development do
-    # Peek Bar
-    gem 'peek'
-    gem 'peek-git'
-    gem 'peek-gc'
-    gem 'peek-performance_bar'
-    gem 'peek-pg'
-  end
-
-  group :test do
-    gem 'rake'
-    gem 'faker'
-    gem 'fabrication'
-    gem 'simplecov', require: false
-    gem 'database_cleaner'
-    gem 'cucumber-rails', require: false
-    gem 'capybara-screenshot'
-    gem 'poltergeist'
-    gem 'rspec-cells'
-    gem 'email_spec'
-  end
+group :test do
+  gem 'rake'
+  gem 'faker'
+  gem 'fabrication'
+  gem 'simplecov', require: false
+  gem 'database_cleaner'
+  gem 'cucumber-rails', require: false
+  gem 'capybara-screenshot'
+  gem 'poltergeist'
+  gem 'rspec-cells'
+  gem 'email_spec'
 end
 
 source 'https://rails-assets.org' do
