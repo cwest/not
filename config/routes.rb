@@ -25,4 +25,6 @@ Rails.application.routes.draw do
 
     resources :organizations
   end
+
+  mount JasmineRails::Engine => '/dev/specs' if defined?(JasmineRails)
 end
