@@ -12,4 +12,4 @@
         li Sit back and enjoy a beer.
       p: big: strong: em Cheers!
   .col-md-6
-    p= render 'shared/brand'
+    = cell(:brand, :home).call(:show)

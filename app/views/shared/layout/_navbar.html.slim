@@ -7,8 +7,7 @@ nav.navbar.navbar-default.navbar-static-top
         span.icon-bar
         span.icon-bar
       = link_to root_path, class: 'navbar-brand' do
-        = render 'shared/brand'
-        = t('app.name')
+        = cell(:brand).call
     #main-navbar-collapse.collapse.navbar-collapse
       ul.nav.navbar-nav
         li= link_to "Organizations", organizations_path
