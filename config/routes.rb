@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   mount Peek::Railtie           => 'peek' if PeekBar.available?
   mount LetterOpenerWeb::Engine => 'mail' if Rails.env.development?
 
@@ -26,4 +25,6 @@ Rails.application.routes.draw do
 
     resources :organizations
   end
+
+  mount JasmineRails::Engine => '/dev/specs' if defined?(JasmineRails)
 end

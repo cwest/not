@@ -7,6 +7,7 @@ li.dropdown
     li.divider
     li= link_to "Mail", letter_opener_web_path, target: '_mail'
     li= link_to "Coverage", 'file://' + File.join(Rails.root, 'reports/coverage/index.html'), target: '_coverage'
+    li= link_to "Jasmine Specs", jasmine_rails_path, target: "_jasmine"
     li.divider
     li= link_to "GitHub", "https://github.com/cwest/not", target: "_github"
     li= link_to "Pull Requests", "https://github.com/cwest/not/pulls", target: "_pulls"
