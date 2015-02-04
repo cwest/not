@@ -1,8 +1,13 @@
 $ ->
   cache = new App.Cache
 
-  $('[data-visibility]').on 'click', (e) ->
-    id = $(e.target).data('visibility')
-    $target = cache.get(id) || cache.set(id, $(id))
-    $target.slideToggle('fast')
+  $(document).on 'click', '[data-visibility]', (e) ->
     e.preventDefault()
+
+    id = $(e.target).data('visibility')
+    $target = cache.get(id) or cache.set(id, $(id))
+
+    if $target.stop().is(':visible')
+      $target.slideUp   'fast', -> $target.trigger 'visibility:hidden'
+    else
+      $target.slideDown 'fast', -> $target.trigger 'visibility:shown'
