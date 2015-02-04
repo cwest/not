@@ -1,0 +1,29 @@
+@mixin brand-logo($style: 'default', $size: 40px, $color: 'gold', $bg: $dark-gray) {
+  .brand-logo-#{$style} {
+    background: {
+      color: $bg;
+      image: asset-url("brand/logo-#{$color}.svg");
+    }
+    border-radius: $size / 2;
+    height: $size;
+    width: $size;
+  }
+}
+
+@mixin brand-name($style: 'default', $size: 40px, $color: $dark-gray) {
+  .brand-name-#{$style} {
+    color: $color;
+    font-size: floor($size / $line-height-base);
+  }
+}
+
+@mixin brand($style: 'default', $size: 40px, $logo: (color: 'gold', bg: $dark-gray), $name: (color: $dark-gray)) {
+  .brand {
+    .brand-logo-#{$style} {
+      margin-right: floor($size / $line-height-base / 2);
+    }
+  }
+
+  @include brand-logo($style, $size, map-get($logo, color), map-get($logo, bg));
+  @include brand-name($style, $size, map-get($name, color));
+}
