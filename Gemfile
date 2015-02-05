@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'
 
 # Core
 gem 'rails', '4.2.0'
@@ -63,6 +64,9 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'jasmine-rails'
 
+  # Rails Assets
+  gem 'rails-assets-jasmine-fixture'
+
   # Safety
   gem 'rubocop',       require: false
   gem 'rubocop-rspec', require: false
@@ -102,8 +106,4 @@ group :test do
   gem 'poltergeist'
   gem 'rspec-cells'
   gem 'email_spec'
-end
-
-source 'https://rails-assets.org' do
-  gem 'rails-assets-jasmine-fixture'
 end
