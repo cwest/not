@@ -29,7 +29,7 @@ namespace :test do
 
   task :prepare do
     ENV['RACK_ENV'] = ENV['RAILS_ENV'] = 'test'
-    puts "RAILS_ENV=#{ENV['RAILS_ENV']}"
+    puts Hash[*ENV.keys.sort.map{|k| [k,ENV[k]]}.flatten].to_yaml
   end
 
   desc 'Run all tests'
