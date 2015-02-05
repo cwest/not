@@ -14,6 +14,7 @@ CI = %w(
   coffeelint
   spec
   cucumber
+  spec:javascript
   notes
   about
 )
