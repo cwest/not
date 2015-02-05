@@ -4,12 +4,12 @@ Rake::Task['test:db'].clear
 Rake::Task['test'].clear
 Rake::Task['default'].clear
 
+# rubocop
 CI = %w(
   environment:report
   test:prepare
   bundle_audit
   brakeman:run
-  rubocop
   scss_lint
   coffeelint
   spec
@@ -29,7 +29,6 @@ namespace :test do
 
   task :prepare do
     ENV['RACK_ENV'] = ENV['RAILS_ENV'] = 'test'
-    puts Hash[*ENV.keys.sort.map{|k| [k,ENV[k]]}.flatten].to_yaml
   end
 
   desc 'Run all tests'
@@ -39,6 +38,7 @@ namespace :test do
   task ci: :environment do
     CI.each do |task|
       pr "rake #{task}"
+      puts Hash[*ENV.keys.sort.map{|k| [k,ENV[k]]}.flatten].to_yaml
       Rake::Task[task].invoke
     end
   end
