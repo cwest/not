@@ -5,6 +5,7 @@ Rake::Task['test'].clear
 Rake::Task['default'].clear
 
 CI = %w(
+  environment:report
   test:prepare
   bundle_audit
   brakeman:run
@@ -14,6 +15,7 @@ CI = %w(
   spec
   cucumber
   notes
+  about
 )
 
 # FIXME: Something about jasmine-rails on Travis is failing only there.
