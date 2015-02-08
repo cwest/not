@@ -38,7 +38,6 @@ namespace :test do
   task ci: :environment do
     CI.each do |task|
       pr "rake #{task}"
-      puts Hash[*ENV.keys.sort.map{|k| [k,ENV[k]]}.flatten].to_yaml
       Rake::Task[task].invoke
     end
   end
