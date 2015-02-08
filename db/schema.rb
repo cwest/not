@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150208203848) do
+ActiveRecord::Schema.define(version: 20150208222052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,6 +52,20 @@ ActiveRecord::Schema.define(version: 20150208203848) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
+
+  create_table "kegs", force: :cascade do |t|
+    t.datetime "tapped_at"
+    t.datetime "kicked_at"
+    t.integer  "keg_volume_id", null: false
+    t.integer  "beer_id",       null: false
+    t.integer  "venue_id",      null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "kegs", ["beer_id"], name: "index_kegs_on_beer_id", using: :btree
+  add_index "kegs", ["keg_volume_id"], name: "index_kegs_on_keg_volume_id", using: :btree
+  add_index "kegs", ["venue_id"], name: "index_kegs_on_venue_id", using: :btree
 
   create_table "organization_roles", force: :cascade do |t|
     t.string   "name",       null: false
@@ -120,6 +134,9 @@ ActiveRecord::Schema.define(version: 20150208203848) do
 
   add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
 
+  add_foreign_key "kegs", "beers"
+  add_foreign_key "kegs", "keg_volumes"
+  add_foreign_key "kegs", "venues"
   add_foreign_key "organization_users", "organization_roles"
   add_foreign_key "organization_users", "organizations"
   add_foreign_key "organization_users", "users"
