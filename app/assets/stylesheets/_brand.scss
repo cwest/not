@@ -1,0 +1,26 @@
+.brand {
+  display: inline-block;
+}
+
+.brand-logo {
+  background: {
+    position: top left;
+    repeat: no-repeat;
+    size: contain;
+  }
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.brand-name {
+  display: inline-block;
+  font: {
+    family: 'Lobster Two', sans-serif;
+    style: italic;
+    weight: bold;
+  }
+  vertical-align: middle;
+}
+
+@include brand;
+@include brand('home', $line-height-computed * 5, (color: 'gold', bg: 'transparent'), (color: $gold));

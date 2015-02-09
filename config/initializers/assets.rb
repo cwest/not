@@ -13,3 +13,5 @@ Rails.application.config.assets.version = '1.0'
 if PeekBar.available?
   Rails.application.config.assets.precompile += %w(peek_bar.css peek_bar.js)
 end
+
+Rails.application.config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
