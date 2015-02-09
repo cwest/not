@@ -14,4 +14,7 @@ class Organization < ActiveRecord::Base
   has_many :users, with_role_extension,
            through:    :organization_users,
            inverse_of: :organizations
+
+  has_many :venues,
+           inverse_of: :organization
 end
