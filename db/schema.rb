@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150208222052) do
+ActiveRecord::Schema.define(version: 20150209001343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -113,6 +113,17 @@ ActiveRecord::Schema.define(version: 20150208222052) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
+  create_table "venue_taps", force: :cascade do |t|
+    t.integer  "number",     null: false
+    t.integer  "venue_id",   null: false
+    t.integer  "keg_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "venue_taps", ["keg_id"], name: "index_venue_taps_on_keg_id", using: :btree
+  add_index "venue_taps", ["venue_id"], name: "index_venue_taps_on_venue_id", using: :btree
+
   create_table "venues", force: :cascade do |t|
     t.string   "name",            null: false
     t.string   "address",         null: false
@@ -140,5 +151,7 @@ ActiveRecord::Schema.define(version: 20150208222052) do
   add_foreign_key "organization_users", "organization_roles"
   add_foreign_key "organization_users", "organizations"
   add_foreign_key "organization_users", "users"
+  add_foreign_key "venue_taps", "kegs"
+  add_foreign_key "venue_taps", "venues"
   add_foreign_key "venues", "organizations"
 end
