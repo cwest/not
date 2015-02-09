@@ -11,10 +11,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150104195801) do
+ActiveRecord::Schema.define(version: 20150209001343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "beer_styles", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "beer_styles", ["name"], name: "index_beer_styles_on_name", unique: true, using: :btree
+
+  create_table "beers", force: :cascade do |t|
+    t.string   "name",          null: false
+    t.decimal  "abv"
+    t.integer  "brewery_id",    null: false
+    t.integer  "beer_style_id", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "beers", ["beer_style_id"], name: "index_beers_on_beer_style_id", using: :btree
+  add_index "beers", ["brewery_id"], name: "index_beers_on_brewery_id", using: :btree
+  add_index "beers", ["name"], name: "index_beers_on_name", using: :btree
+
+  create_table "breweries", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "keg_volumes", force: :cascade do |t|
+    t.string   "name",             null: false
+    t.decimal  "us_gallons"
+    t.decimal  "litres"
+    t.decimal  "imperial_gallons"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+  end
+
+  create_table "kegs", force: :cascade do |t|
+    t.datetime "tapped_at"
+    t.datetime "kicked_at"
+    t.integer  "keg_volume_id", null: false
+    t.integer  "beer_id",       null: false
+    t.integer  "venue_id",      null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "kegs", ["beer_id"], name: "index_kegs_on_beer_id", using: :btree
+  add_index "kegs", ["keg_volume_id"], name: "index_kegs_on_keg_volume_id", using: :btree
+  add_index "kegs", ["venue_id"], name: "index_kegs_on_venue_id", using: :btree
 
   create_table "organization_roles", force: :cascade do |t|
     t.string   "name",       null: false
@@ -62,6 +113,27 @@ ActiveRecord::Schema.define(version: 20150104195801) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   add_index "users", ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
 
+  create_table "venue_taps", force: :cascade do |t|
+    t.integer  "number",     null: false
+    t.integer  "venue_id",   null: false
+    t.integer  "keg_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "venue_taps", ["keg_id"], name: "index_venue_taps_on_keg_id", using: :btree
+  add_index "venue_taps", ["venue_id"], name: "index_venue_taps_on_venue_id", using: :btree
+
+  create_table "venues", force: :cascade do |t|
+    t.string   "name",            null: false
+    t.string   "address",         null: false
+    t.integer  "organization_id", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "venues", ["organization_id"], name: "index_venues_on_organization_id", using: :btree
+
   create_table "versions", force: :cascade do |t|
     t.string   "item_type",  null: false
     t.integer  "item_id",    null: false
@@ -73,7 +145,13 @@ ActiveRecord::Schema.define(version: 20150104195801) do
 
   add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
 
+  add_foreign_key "kegs", "beers"
+  add_foreign_key "kegs", "keg_volumes"
+  add_foreign_key "kegs", "venues"
   add_foreign_key "organization_users", "organization_roles"
   add_foreign_key "organization_users", "organizations"
   add_foreign_key "organization_users", "users"
+  add_foreign_key "venue_taps", "kegs"
+  add_foreign_key "venue_taps", "venues"
+  add_foreign_key "venues", "organizations"
 end
