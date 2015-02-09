@@ -2,7 +2,12 @@
 @import 'bootstrap';
 @import 'bourbon';
 
-@import 'color';
+@import 'mixins/brand_mixin';
+
+@import 'base/color';
+@import 'base/font';
+
+@import 'brand';
 
 @import 'cells/flash';
 
