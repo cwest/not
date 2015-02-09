@@ -26,3 +26,4 @@
 
 # Ignore OSX files.
 .DS_Store
+.rake_tasks
