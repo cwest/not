@@ -1,2 +1,6 @@
 .brand-name class=brand_style_class
-  = t('app.name')
+  span aria-label="Next On Tap"
+    / This is a light-weight kerning fix to avoid FOUC from something like
+    / lettering.js.
+    span.kerning-left aria-hidden="true" Next On T
+    span.kerning-right aria-hidden="true" ap

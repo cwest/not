@@ -20,6 +20,10 @@
     weight: bold;
   }
   vertical-align: middle;
+
+  .kerning-right {
+    margin-left: -.2em;
+  }
 }
 
 @include brand;
