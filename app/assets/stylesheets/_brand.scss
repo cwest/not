@@ -21,7 +21,11 @@
   }
   vertical-align: middle;
 
-  .kerning-right {
+  .kerning-middle {
+    margin-left: -.09em;
+  }
+
+  .kerning-end {
     margin-left: -.2em;
   }
 }
