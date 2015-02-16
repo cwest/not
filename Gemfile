@@ -18,6 +18,10 @@ gem 'simple_form'
 gem 'country_select'
 gem 'reform'
 gem 'high_voltage'
+gem 'kramdown'
+
+# Mailer
+gem 'markerb'
 
 # View Controller
 gem 'cells'
