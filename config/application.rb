@@ -23,16 +23,6 @@ module Not
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.generators do |g|
-      g.test_framework      :rspec, fixture: true
-      g.fixture_replacement :fabrication
-
-      # We throw these away pretty often anyway.
-      g.assets = false
-      g.helper = false
-      g.view_specs = false
-    end
-
     config.autoload_paths += %W(
       #{config.root}/app/extensions
       #{config.root}/app/forms
