@@ -225,6 +225,8 @@ GEM
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
     powerpack (0.1.0)
+    pretty_backtrace (0.1.2)
+      debug_inspector (~> 0.0.1)
     priscilla (1.0.3)
       colorize (~> 0.7)
       rumoji (~> 0.3)
@@ -437,6 +439,7 @@ DEPENDENCIES
   peek-pg
   pg
   poltergeist
+  pretty_backtrace
   priscilla
   pry-byebug
   pry-doc
