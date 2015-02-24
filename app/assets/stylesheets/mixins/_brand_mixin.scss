@@ -1,4 +1,8 @@
-@mixin brand-logo($style: 'default', $size: 40px, $color: 'gold', $bg: $dark-gray) {
+// scss-lint:disable ColorVariable
+$brand-default-logo: 'gold';
+// scss-lint:enable ColorVariable
+
+@mixin brand-logo($style: 'default', $size: 40px, $color: $brand-default-logo, $bg: $dark-gray) {
   .brand-logo-#{$style} {
     background: {
       color: $bg;
@@ -17,7 +21,7 @@
   }
 }
 
-@mixin brand($style: 'default', $size: 40px, $logo: (color: 'gold', bg: $dark-gray), $name: (color: $dark-gray)) {
+@mixin brand($style: 'default', $size: 40px, $logo: (color: $brand-default-logo, bg: $dark-gray), $name: (color: $dark-gray)) {
   .brand {
     .brand-logo-#{$style} {
       margin-right: floor($size / $line-height-base / 2);

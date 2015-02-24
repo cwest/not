@@ -31,4 +31,4 @@
 }
 
 @include brand;
-@include brand('home', $line-height-computed * 5, (color: 'gold', bg: 'transparent'), (color: $gold));
+@include brand('home', $line-height-computed * 5, (color: $brand-default-logo, bg: 'transparent'), (color: $gold));
