@@ -5,7 +5,7 @@ class Organization
     def initialize(options = {})
       super
       @params = options[:params] || {}
-      @form   = options[:form]   || OrganizationForm.new(Organization.new)
+      @form   = options[:form] || OrganizationForm.new(Organization.new)
     end
 
     def perform

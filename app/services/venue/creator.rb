@@ -7,8 +7,8 @@ class Venue
     def initialize(options = {})
       super
       @params       = options[:params] || {}
-      @form         = options[:form]   || VenueForm.new(Venue.new)
-      @taps         = options[:taps]   || DEFAULT_NUMBER_OF_TAPS
+      @form         = options[:form] || VenueForm.new(Venue.new)
+      @taps         = options[:taps] || DEFAULT_NUMBER_OF_TAPS
       @organization = options[:organization]
     end
 
