@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 source 'https://rails-assets.org'
 
 # Core
-gem 'rails', '4.2.0'
+gem 'rails', '4.2.1'
 
 # Model
 gem 'pg'
@@ -67,7 +67,7 @@ group :development, :test do
   gem 'pretty_backtrace'
 
   # Test
-  gem 'rspec-rails', '~> 3.0'
+  gem 'rspec-rails', '~> 3.2'
   gem 'jasmine-rails'
 
   # Rails Assets
