@@ -35,7 +35,7 @@ RSpec.describe OrganizationPolicy, type: :policy do
       Fabricate(:organization_user,
                 user: user,
                 organization_role: Fabricate(:organization_role_owner)
-      ).organization
+               ).organization
     end
     let(:not_owned_organization) { Fabricate(:organization_user).organization }
 
